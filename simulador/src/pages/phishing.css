@@ -1,0 +1,325 @@
+/* ===========================================================
+   Estilos das páginas de login SIMULADAS (treinamento anti-phishing).
+   Marcas fictícias inspiradas em serviços reais, nunca cópias oficiais.
+   =========================================================== */
+
+* { box-sizing: border-box; }
+
+/* Realce de foco visível em toda a aplicação (acessibilidade) */
+.sim-page a:focus-visible,
+.sim-page button:focus-visible,
+.sim-page input:focus-visible,
+.reveal button:focus-visible,
+.sim-home button:focus-visible {
+  outline: 3px solid #1351b4;
+  outline-offset: 2px;
+}
+
+/* ---------- Banner de treinamento ---------- */
+.sim-banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: repeating-linear-gradient(
+    45deg, #1b1b1b, #1b1b1b 14px, #2a2a2a 14px, #2a2a2a 28px
+  );
+  color: #ffd54a;
+  font: 700 15px/1.35 system-ui, sans-serif;
+  border-bottom: 2px solid #ffd54a;
+}
+.sim-banner__text { flex: 1; }
+.sim-banner__exit {
+  background: #ffd54a;
+  color: #1b1b1b;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font: 700 14px system-ui, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ---------- Casca comum de página ---------- */
+.sim-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+.sim-page__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+.sim-field {
+  width: 100%;
+  padding: 13px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.sim-submit {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* red flag visível de propósito (URL falsa simulando a barra do navegador) */
+.sim-fakeurl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 15px/1.2 ui-monospace, Consolas, monospace;
+  color: #b3261e;
+  background: #fdecea;
+  border-bottom: 2px solid #b3261e;
+  padding: 12px 16px;
+}
+.sim-fakeurl::before {
+  content: '⚠';
+  font-size: 17px;
+}
+.sim-fakeurl b { color: #b3261e; font-weight: 700; }
+
+/* ===========================================================
+   Livre-mercado  (inspirado no Mercado Livre)
+   =========================================================== */
+.lm { background: #ededed; }
+.lm .lm-top {
+  background: #fff159;
+  padding: 14px 16px;
+  text-align: center;
+}
+.lm .lm-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 22px;
+  color: #2d3277;
+  letter-spacing: -0.5px;
+}
+.lm .lm-logo__hands {
+  width: 46px; height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+.lm .lm-card {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.12);
+  padding: 32px 28px;
+}
+.lm .lm-card h1 { font-size: 18px; color: #333; margin-bottom: 20px; font-weight: 600; }
+.lm .sim-submit { background: #3483fa; }
+.lm .lm-secondary {
+  width: 100%; padding: 13px; margin-top: 12px;
+  background: #eaf2fe; color: #3483fa; border: 0; border-radius: 6px;
+  font-size: 16px; font-weight: 600; cursor: pointer;
+}
+.lm .lm-link { color: #3483fa; font-size: 14px; text-decoration: none; }
+
+/* ===========================================================
+   govFake  (inspirado no gov.br)
+   =========================================================== */
+.gov { background: #fff; }
+.gov .gov-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+}
+.gov .gov-wordmark { font-size: 30px; font-weight: 800; letter-spacing: -1px; }
+.gov .gov-wordmark .g { color: #1351b4; }
+.gov .gov-wordmark .o { color: #ffcd07; }
+.gov .gov-wordmark .v { color: #168821; }
+.gov .gov-wordmark .br { color: #1351b4; }
+.gov .gov-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 28px;
+}
+.gov .gov-card h1 { font-size: 22px; color: #1351b4; margin-bottom: 6px; font-weight: 700; }
+.gov .gov-alert {
+  background: #fff4d9; border: 1px solid #ffcd07; color: #8a6d00;
+  padding: 11px 13px; border-radius: 6px; font-size: 14px; line-height: 1.45; margin: 14px 0 20px;
+}
+.gov .gov-label { display: block; font-size: 14px; color: #333; margin-bottom: 6px; font-weight: 600; }
+.gov .sim-submit { background: #1351b4; border-radius: 20px; }
+.gov .gov-link { color: #1351b4; font-size: 14px; text-decoration: none; font-weight: 600; }
+
+/* ===========================================================
+   feetbook  (inspirado no Facebook)
+   =========================================================== */
+.fb { background: #f0f2f5; }
+.fb .fb-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+  max-width: 980px;
+  width: 100%;
+}
+.fb .fb-brand { max-width: 420px; }
+.fb .fb-logo { color: #1877f2; font-size: 56px; font-weight: 800; letter-spacing: -2px; margin-bottom: 10px; }
+.fb .fb-tagline { font-size: 26px; line-height: 1.3; color: #1c1e21; }
+.fb .fb-card {
+  width: 396px; max-width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  padding: 20px;
+}
+.fb .fb-card .sim-field { padding: 15px; font-size: 16px; }
+.fb .sim-submit { background: #1877f2; font-size: 20px; padding: 14px; }
+.fb .fb-forgot { display: block; text-align: center; color: #1877f2; font-size: 14px; margin: 16px 0; text-decoration: none; }
+.fb .fb-divider { border: 0; border-top: 1px solid #dadde1; margin: 20px 0; }
+.fb .fb-create {
+  display: block; margin: 0 auto; padding: 14px 16px;
+  background: #42b72a; color: #fff; border: 0; border-radius: 6px;
+  font-size: 17px; font-weight: 700; cursor: pointer;
+}
+
+/* ===========================================================
+   minsigrammer  (inspirado no Instagram)
+   =========================================================== */
+.ig { background: #fafafa; }
+.ig .ig-card {
+  width: 350px; max-width: 100%;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 40px 40px 24px;
+  text-align: center;
+}
+.ig .ig-logo {
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: 44px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 8px 0 28px;
+}
+.ig .ig-card .sim-field {
+  background: #fafafa; font-size: 15px; padding: 12px 10px; margin-bottom: 8px;
+}
+.ig .sim-submit { background: #0095f6; font-size: 15px; padding: 11px; margin-top: 8px; }
+.ig .ig-or {
+  display: flex; align-items: center; gap: 16px; margin: 18px 0;
+  color: #8e8e8e; font-size: 13px; font-weight: 600;
+}
+.ig .ig-or::before, .ig .ig-or::after { content: ''; flex: 1; height: 1px; background: #dbdbdb; }
+.ig .ig-fb { color: #385185; font-size: 15px; font-weight: 600; text-decoration: none; }
+.ig .ig-forgot { color: #00376b; font-size: 14px; text-decoration: none; display: block; margin-top: 18px; }
+
+/* ---------- Tela de revelação educativa ---------- */
+.reveal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: #0f172a;
+}
+.reveal__card {
+  max-width: 560px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4);
+}
+.reveal__icon { font-size: 54px; text-align: center; }
+.reveal__title { color: #b91c1c; font-size: 30px; margin: 8px 0 18px; text-align: center; }
+.reveal__lead { font-size: 19px; line-height: 1.6; color: #1f2937; }
+.reveal__note {
+  background: #ecfdf5; color: #065f46; border-left: 4px solid #10b981;
+  padding: 12px 16px; border-radius: 6px; font-size: 16px; line-height: 1.5;
+}
+.reveal__subtitle { font-size: 20px; color: #111827; margin: 24px 0 10px; }
+.reveal__flags li, .reveal__tips li { margin: 10px 0; line-height: 1.55; color: #1f2937; font-size: 17px; }
+.reveal__actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.reveal__btn {
+  flex: 1; min-width: 180px; padding: 15px; border: 0; border-radius: 8px;
+  background: #1351b4; color: #fff; font-weight: 700; font-size: 17px; cursor: pointer;
+}
+.reveal__btn--ghost { background: #e5e7eb; color: #111827; }
+
+/* ---------- Menu inicial ---------- */
+.sim-home {
+  min-height: 100vh; background: #0f172a; color: #e2e8f0;
+  font-family: system-ui, sans-serif; padding: 48px 20px;
+}
+.sim-home__inner { max-width: 760px; margin: 0 auto; }
+.sim-home h1 { font-size: 30px; margin-bottom: 10px; }
+.sim-home p.lead { color: #cbd5e1; font-size: 18px; line-height: 1.6; margin-bottom: 30px; }
+.sim-home__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.sim-home__item {
+  text-align: left; background: #1e293b; border: 1px solid #334155;
+  border-radius: 12px; padding: 20px 22px; cursor: pointer; color: #e2e8f0;
+}
+.sim-home__item:hover { border-color: #3483fa; background: #243040; }
+.sim-home__item h3 { margin: 0 0 4px; font-size: 20px; }
+.sim-home__item-imita { display: block; font-size: 14px; font-weight: 700; color: #93c5fd; margin-bottom: 8px; }
+.sim-home__item span { display: block; font-size: 15px; line-height: 1.45; color: #cbd5e1; }
+.sim-home__disclaimer {
+  margin-top: 32px; font-size: 15px; line-height: 1.55; color: #fecaca;
+  background: #1e293b; border: 1px solid #7f1d1d; border-radius: 10px; padding: 16px 20px;
+}
+
+/* ---------- Controle de tamanho de letra (flutuante) ---------- */
+.fontctl {
+  position: fixed; bottom: 16px; right: 16px; z-index: 100;
+  display: flex; align-items: center; gap: 10px;
+  background: #0f172a; color: #fff; border: 2px solid #ffd54a;
+  border-radius: 999px; padding: 8px 10px 8px 16px;
+  font: 700 14px system-ui, sans-serif;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.fontctl__label { font-size: 13px; }
+.fontctl button {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 0; background: #ffd54a; color: #1b1b1b;
+  font-weight: 800; cursor: pointer; line-height: 1;
+}
+.fontctl button:first-of-type { font-size: 15px; }
+.fontctl button:last-of-type { font-size: 22px; }
+.fontctl button:disabled { opacity: .4; cursor: default; }
+
+/* ---------- Revelação: modo alto contraste ---------- */
+.reveal__hc-toggle {
+  display: block; margin: 0 0 4px auto;
+  background: transparent; border: 1px solid #94a3b8; color: #475569;
+  border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.reveal--hc { background: #000; }
+.reveal--hc .reveal__card { background: #fff; border: 3px solid #000; box-shadow: none; }
+.reveal--hc .reveal__title,
+.reveal--hc .reveal__lead,
+.reveal--hc .reveal__subtitle,
+.reveal--hc .reveal__flags li,
+.reveal--hc .reveal__tips li { color: #000; }
+.reveal--hc .reveal__note { background: #fff; color: #000; border-left-color: #000; }
+.reveal--hc .reveal__hc-toggle { border-color: #000; color: #000; }
+.reveal--hc .reveal__btn { background: #000; color: #fff; }
+.reveal--hc .reveal__btn--ghost { background: #fff; color: #000; border: 2px solid #000; }
